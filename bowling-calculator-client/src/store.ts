@@ -35,6 +35,7 @@ export const mutations = {
   resetBowlingSet: (state: any) => {
     state.historicRolls = [];
     state.scoreCard = [];
+    state.totalScore = 0;
   }
 }
 
