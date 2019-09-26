@@ -25,19 +25,6 @@ router.get('/scoreCard', (req: express.Request, res: express.Response) => {
 
     let response: ScoreCard | ErrorResponse = getScoreCard(addedNewRoll);
     res.json(response);
-    //check if the rolls are a valid sequence of rolls
-    // if (validSequenceOfRolls(addedNewRoll)) {
-    //     res.json(getScoreCard(addedNewRoll));
-
-    // } else {
-    //     let error: ErrorResponse = {
-    //         validRoll: false,
-    //         message: "Invalid roll"
-    //     }
-    //     //send error message that the user entered an invalid roll.
-    //     res.json(error);
-    // }
-
 })
 
 module.exports = router
