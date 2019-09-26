@@ -1,0 +1,30 @@
+{
+  "name": "bowling-calculator-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p .",
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.7",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.2",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  }
+}
