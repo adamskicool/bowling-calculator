@@ -17,8 +17,19 @@ describe("Test the fetching process when adding a new roll", () => {
         });
     })
 
-    //TODO
-    test("Invalid feched data does not effect the state", () => {
+    test("Reset mutation works as expected", () => {
+        let state = {
+            historicRolls: [1, 2, 3],
+            scoreCard: [],
+            totalScore: 6
+        }
+        let resetState = {
+            historicRolls: [],
+            scoreCard: [],
+            totalScore: 0
+        }
 
+        mutations.resetBowlingSet(state);
+        expect(state).toEqual(resetState);
     })
 })
