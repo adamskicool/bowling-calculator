@@ -24,16 +24,5 @@ router.get('/scoreCard', (req, res) => {
     let addedNewRoll = bowling_logic_1.addRoll(historicRolls.data, newRoll);
     let response = bowling_logic_1.getScoreCard(addedNewRoll);
     res.json(response);
-    //check if the rolls are a valid sequence of rolls
-    // if (validSequenceOfRolls(addedNewRoll)) {
-    //     res.json(getScoreCard(addedNewRoll));
-    // } else {
-    //     let error: ErrorResponse = {
-    //         validRoll: false,
-    //         message: "Invalid roll"
-    //     }
-    //     //send error message that the user entered an invalid roll.
-    //     res.json(error);
-    // }
 });
 module.exports = router;
