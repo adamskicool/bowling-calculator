@@ -135,10 +135,17 @@ class FinalFrame extends Frame {
         }
     }
 
+    /**
+     * Number of strikes ahead is slightly different for the last frame, simply return the amount of strikes that are in a row 
+     * minus one to account for the first strike.
+     */
     numberOfStrikesAhead() {
         return this.strikesInARow - 1;
     }
 
+    /**
+     * This final pinns frams score is equal to the amount of pins knocked down!
+     */
     calculateFrameScore() {
         return this.pinCount;
     }
