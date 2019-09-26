@@ -1,6 +1,6 @@
 # **CODE TEST**
 
-The front end (client) is written with Vue.js and uses the Vuex state manager and TypeScript. The stateless component in the front end is TotalScore.vue which only displays the total score and contains no other logic than displaying information. The backend (server) is written in Node.js with Experss.js and TypeScript. The unit testing framework chosen is Jest, both on the client and the server.
+The front end (client) is written with Vue.js and uses the Vuex state manager and TypeScript. The stateless component in the front end is TotalScore.vue which only displays the total score and contains no other logic than displaying information. The backend (server) is written in Node.js with Express.js and TypeScript. The unit testing framework chosen is Jest, both on the client and the server.
 
 #### Project structure
 
