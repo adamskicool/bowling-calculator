@@ -1,13 +1,14 @@
 <template>
   <div class="score-input">
     <input
+      class="button"
       v-for="button in this.buttons"
       v-bind:key="button"
       type="button"
       v-bind:value="button"
       v-on:click="addRollToStore(button)"
     />
-    <input type="button" value="Reset score" v-on:click="resetBowlingSet()" />
+    <input class="button" type="button" value="Reset score" v-on:click="resetBowlingSet()" />
   </div>
 </template>
 
@@ -33,4 +34,20 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.score-input {
+  margin: 20px;
+}
+
+.button {
+  margin: 5px;
+  border-radius: 3px;
+  height: 25px;
+  width: auto;
+  border: 2px solid black;
+  text-align: center;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
 </style>
