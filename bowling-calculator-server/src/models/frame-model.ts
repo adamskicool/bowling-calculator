@@ -1,5 +1,4 @@
 export { BowlingTermnilogi, Frame, FinalFrame };
-import { ScoreCard } from './interfaces';
 
 enum BowlingTermnilogi {
     Strike,

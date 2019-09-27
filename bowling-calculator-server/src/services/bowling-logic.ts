@@ -2,7 +2,7 @@
  * Here resides all the bowling logic. 
  */
 import { Frame, FinalFrame } from '../models/frame-model';
-import { ScoreCard, ScoreCardEntry, ErrorResponse } from '../models/interfaces';
+import { ValidResponse, ScoreCardEntry, ErrorResponse } from '../models/interfaces';
 
 /**
  * This function adds a new roll to an existing array of rolls. If that roll happens to be a strike
@@ -86,7 +86,7 @@ let validSequenceOfRolls = (historicRolls: number[]): boolean => {
  * This function converts a set of rolls to a scorecard (See ScoreCard interface for details).
  * @param rolls Set of rolls.
  */
-let getScoreCard = (rolls: number[]): ScoreCard | ErrorResponse => {
+let getScoreCard = (rolls: number[]): ValidResponse | ErrorResponse => {
     let valid = validSequenceOfRolls(rolls);//check if valid set of rolls.
     if (valid) { //if valid, send back the scorecard
         let frames: Frame[] = convertRollsToFrames(rolls); //convert roll array to array of frames (Frame[]).

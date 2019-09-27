@@ -8,7 +8,7 @@ router.get('/', (req: express.Request, res: express.Response) => {
 
 
 import { getScoreCard, addRoll } from '../services/bowling-logic';
-import { ScoreCard, ErrorResponse } from '../models/interfaces'
+import { ValidResponse, ErrorResponse } from '../models/interfaces'
 
 /**
  * 
@@ -23,7 +23,7 @@ router.get('/scoreCard', (req: express.Request, res: express.Response) => {
     //add the new roll
     let addedNewRoll: number[] = addRoll(historicRolls.data, newRoll);
 
-    let response: ScoreCard | ErrorResponse = getScoreCard(addedNewRoll);
+    let response: ValidResponse | ErrorResponse = getScoreCard(addedNewRoll);
     res.json(response);
 })
 

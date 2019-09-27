@@ -1,7 +1,7 @@
 <template>
   <div class="score-card box">
-    <!-- This background utlizes the components empty, that is without passing props to it¨
-    this is done to create an empty grid-->
+    <!-- This background uses the frames components by only passing the frameNumbers,
+    this is done to create an empty grid. -->
     <div class="background">
       <frame-standard v-bind:frameNumber="1" />
       <frame-standard v-bind:frameNumber="2" />
@@ -13,6 +13,7 @@
       <frame-standard v-bind:frameNumber="8" />
       <frame-standard v-bind:frameNumber="9" />
       <frame-final v-bind:frameNumber="10" />
+      <!-- Also use a stateless component for displaying the total score of the scorecard -->
       <total-score v-bind:totalScore="this.$store.getters.total" />
     </div>
     <div class="actual-frames">
@@ -31,13 +32,6 @@
           v-bind:points="frame.accumulatedScore"
         />
       </div>
-      <!-- <frame-final
-        v-if="this.getBowlingSet().getFinalFrame() != null"
-        v-bind:firstShot="this.getBowlingSet().getFinalFrame().strokes[0]"
-        v-bind:secondShot="this.getBowlingSet().getFinalFrame().strokes[1]"
-        v-bind:thirdShot="this.getBowlingSet().getFinalFrame().strokes[2]"
-        v-bind:points="this.getBowlingSet().getFinalFrame().accumulatedScore"
-      />-->
     </div>
   </div>
 </template>
