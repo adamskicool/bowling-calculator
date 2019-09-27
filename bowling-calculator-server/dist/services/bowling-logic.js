@@ -60,12 +60,12 @@ let validSequenceOfRolls = (historicRolls) => {
         }
         /*
         If we are in the third shot of the last frame, it is valid unless
-        the score the first and second shot isn't combined 10 or 20... given that the first shot was not a strike.
-        It is also valud unless, given that the first shot was a strike and second shot was not a strike, the second and third shot must be in range (0, 10) or 20
+        the score the first and second shot isn't combined 10... given that the first shot was not a strike.
+        It is also valid unless, given that the first shot was a strike and second shot was not a strike, the second and third shot must be in range (0, 10) or 20
         */
         else if (i == 20) {
             if (historicRolls[i - 2] != 10) {
-                if (historicRolls[i - 2] + historicRolls[i - 1] != 10 && historicRolls[i - 2] + historicRolls[i - 1] != 20) {
+                if (historicRolls[i - 2] + historicRolls[i - 1] != 10) {
                     return false;
                 }
             }
