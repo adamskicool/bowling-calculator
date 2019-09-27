@@ -11,7 +11,8 @@ interface ScoreCardEntry {
 }
 
 /**
- * Describes what the server response should look like.
+ * Describes what the server response should look like when processeing of the recieved
+ * bowling data was successful.
  */
 interface ValidResponse {
     validRoll: boolean,
