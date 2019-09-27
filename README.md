@@ -12,7 +12,7 @@ bowling-calculator-client:
 | ---------------------------------- | ------------------------------------------------------------ |
 | src/components/ScoreCardComponents | Components related to and utilized by ScoreCard.vue          |
 | src/services/bowlingAPIFetch.ts    | Service for fetching a new bowling scorecard from the server |
-| tests/unit/*.spec.ts               | unit tests that check rendering of the ScoreCardComponents and handling of fetched data from the server. |
+| tests/unit/*.spec.ts               | unit tests that check rendering of the ScoreCardComponents and handling of fetched data from the server. To run the tests type:<br />**npm run test:unit** |
 | tests/unit/\_\_mocks\_\_           | mocked services, in this project we mock calls to axios.get(). |
 
 bowling-calculator-server:
@@ -21,7 +21,7 @@ bowling-calculator-server:
 | ------------------------------ | ------------------------------------------------------------ |
 | src/                           | source folder with all of our typescript files               |
 | dist/                          | Production folder with generated javascript code             |
-| dist/\_\_tests\_\_             | this folder contains the unit tests that test the varios models and classes. |
+| dist/\_\_tests\_\_             | this folder contains the unit tests that test the varios models and classes. To run the tests type<br /> **npm run test** |
 | dist/models/frame-model.ts     | contains classes that are used to model a bowling series, manely the frames. Each bowling game consists of 10 frames where frame 1-9 has two rolls and frame 10 has (potentially) three rolls. |
 | dist/models/interfaces.ts      | contains all the interfaces used by the server, which includes what format a score card should have and how an error response should be structured. |
 | dist/routes                    | This folder contains the Express routers used to setup different API endpoints. Allthough this project only has one. |
